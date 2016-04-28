@@ -44,16 +44,16 @@ render: function() {
 	var contacts = [];
 	for (var i in this.state.people) {
 		contacts.push(<Person
-			key = {i}
+			key = {i+"p"}
 			firstName = {this.state.people[i].firstName}
 			lastName =  {this.state.people[i].lastName}
 			number = {this.state.people[i].number} />)
 	}
-	for (var j in this.state.business) {
-		contacts.push(<createBusiness
-			key = {j}
-			name = {this.state.business[j].bizName}
-			number = {this.state.business[j].bizNum} />)
+	for (var j in this.state.businesses) {
+		contacts.push(<Business
+			key = {j+"b"}
+			bizName = {this.state.businesses[j].bizName}
+			bizNum = {this.state.businesses[j].bizNum} />)
     }
     return (
     	<div> 
